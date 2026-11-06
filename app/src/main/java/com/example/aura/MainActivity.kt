@@ -1,0 +1,20 @@
+package com.example.aura
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import com.example.aura.ui.navigation.AuraApp
+import com.example.aura.ui.theme.AuraTheme
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContent {
+            AuraTheme(darkTheme = false, dynamicColor = false) {
+                AuraApp()
+            }
+        }
+    }
+}
